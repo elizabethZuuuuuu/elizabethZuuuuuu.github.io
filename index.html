@@ -2,29 +2,69 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <link rel = "stylesheet" href="css/style1.css">
         <title>HTML Document</title>
         <div>
-            <h1>
+            <h1 class="HeadR">
                 <ins>Резюме</ins>          
             </h1>
-            </div>
+        </div>
+        <style>
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            
+            .button2 {background-color: #008CBA;} /* Blue */
+            .button3 {background-color: #f44336;} /* Red */ 
+            .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+            .button5 {background-color: #555555;} /* Black */
+            .HeadR:hover{color: #9d649c}
+            .Name:hover{color: #9d3cca}
+            .Name{
+                width: 400px;
+                -webkit-box-shadow: 0px 5px 10px 2px rgba(75, 7, 184, 0.849) inset;
+                -moz-box-shadow: 0px 5px 10px 2px rgba(53, 15, 192, 0.856) inset;
+                box-shadow: 0px 5px 10px 2px rgba(221, 11, 22, 0.2) inset;
+            }
+            .Photo{
+                width: 400px;
+                box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);}
+            </style>
     </head>
-    <body>
+    <body id="body" style="background-color: #e7e7e7">
         <div>
+            <div
+                class= "Photo">
+                <img width="400px" height="400px" src="Liza.jpg">
+            </div>
             <div
                 class="Name">
                 <h1>
-                    <i>Зубкова</i> <br>
-                    <i>Елизавета</i> <br>
-                    АДБ-18-07
+                    <i id="hSurname">Зубкова</i>
+                    <i id="hName">Елизавета</i> <br>
+                    Студентка группы: АДБ-18-07
                 </h1>
             </div> 
-            <div
-                class= "Photo">
-                <img src="https://sun9-37.userapi.com/impg/6dUSkeYEVtbFzfYAfsvDw9nOhSsYgpReoqPDag/Jj6aepFjZss.jpg?size=274x182&quality=96&sign=5e8473aff70e6a911701be8bda25b3c2&type=album">
-
-            </div>
+            <button class="button" onclick="ChangeColor('Green')">Green</button>
+            <button class="button button2" onclick="ChangeColor('Blue')">Blue</button>
+            <button class="button button3" onclick="ChangeColor('Red')">Red</button>
+            <button class="button button4" onclick="ChangeColor('Gray')">Gray</button>
+            <button class="button button5" onclick="ChangeColor('Black')">Black</button>
         </div>
+        <script src="js/kod.js">
+        </script>
+        <p><input type="text" id="userSurname" placeholder="Введите фамилию" size="18" /></p>
+        <p><input type="text" id="userName" value="" placeholder="Введите имя" size="18" /></p>
+        <button type="submit" onclick="ChangeNames()">Отправить</button> 
     </body>
     <style>
 
